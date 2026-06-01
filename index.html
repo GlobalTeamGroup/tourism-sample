@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="ВАША КОМПАНИЯ — образец шаблонного сайта для портфолио Global Plus" />
+  <title>ВАША КОМПАНИЯ — Образец сайта</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <canvas id="gl-canvas"></canvas>
+  <canvas id="particle-canvas"></canvas>
+  <div class="grain-overlay"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" data-scroll="0">
+        <img src="images/logo.png" alt="ВАША КОМПАНИЯ" class="logo-img" />
+        <span class="logo-text">ВАША <span class="logo-accent">КОМПАНИЯ</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" data-scroll="1" class="nav-link">Tours</a></li>
+        <li><a href="#" data-scroll="2" class="nav-link">примеры ваших работ</a></li>
+        <li><a href="#" data-scroll="3" class="nav-link">Процесс работы</a></li>
+        <li><a href="#" data-scroll="4" class="nav-link">About</a></li>
+        <li><a href="#" data-scroll="5" class="nav-link nav-cta">Plan Trip</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="nav-scrim" id="nav-scrim" hidden></div>
+  <div class="nav-drawer" id="nav-drawer" hidden>
+    <button class="drawer-close" id="drawer-close" aria-label="Close">✕</button>
+    <ul class="drawer-links" id="drawer-links">
+      <li><a href="#" data-scroll="1" class="drawer-link">Tours</a></li>
+      <li><a href="#" data-scroll="2" class="drawer-link">примеры ваших работ</a></li>
+      <li><a href="#" data-scroll="3" class="drawer-link">Процесс работы</a></li>
+      <li><a href="#" data-scroll="4" class="drawer-link">About</a></li>
+      <li><a href="#" data-scroll="5" class="drawer-link">Plan Trip</a></li>
+    </ul>
+    <div class="drawer-contacts"></div>
+  </div>
+
+  <div id="ui-layer">
+    <div class="stage">
+
+      <section class="page is-active" data-index="0" id="hero">
+        <div class="page-inner hero-inner">
+          <img src="images/logo.png" alt="ВАША КОМПАНИЯ" class="hero-logo reveal-3d">
+          <div class="hero-badge reveal-3d">ВАШ БРЕНД • ВАША НИША • ВАШЕ НАПРАВЛЕНИЕ</div>
+          <h1 class="hero-title reveal-3d"><span class="gradient-text">ВАША КОМПАНИЯ</span></h1>
+          <p class="hero-subtitle reveal-3d">Тут Вы можете написать свой слоган, краткое описание или горячее предложение - всё, что пожелаете!</p>
+          <div class="hero-cta-group reveal-3d">
+            <a href="#" data-scroll="1" class="btn-primary">Explore Tours</a>
+            <a href="#" data-scroll="5" class="btn-outline">Plan Your Trip</a>
+          </div>
+          <div class="hero-scroll-hint"><div class="scroll-line"></div><span>scroll</span></div>
+        </div>
+      </section>
+
+      <section class="page" data-index="1" id="services">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Our Experiences</div>
+          <h2 class="section-title reveal-3d">Extraordinary<br><span class="gradient-text">Travel Experiences</span></h2>
+          <p class="section-desc reveal-3d">From cultural immersions to adrenaline adventures — your journey awaits</p>
+          <div class="services-grid reveal-3d">
+            <div class="service-card"><div class="service-icon">🏛️</div><h3>Cultural Expeditions</h3><p>Immerse yourself in ancient civilizations and living traditions. Expert-guided tours through historic capitals, museums, and UNESCO heritage sites.</p></div>
+            <div class="service-card"><div class="service-icon">⛰️</div><h3>Adventure Tours</h3><p>Push your boundaries with carefully crafted adventure itineraries. Mountain treks, jungle expeditions, and extreme sports with safety-first guides.</p></div>
+            <div class="service-card"><div class="service-icon">🌟</div><h3>Luxury Getaways</h3><p>Five-star resorts, private villas, and exclusive island retreats. Indulgence redefined with bespoke hospitality.</p></div>
+            <div class="service-card"><div class="service-icon">🏙️</div><h3>City Breaks</h3><p>Explore the world's most vibrant metropolises. Curated itineraries featuring hidden gems, Michelin dining, and cultural hotspots.</p></div>
+            <div class="service-card"><div class="service-icon">🌿</div><h3>Nature Escapes</h3><p>Reconnect with the natural world. Safari drives, rainforest lodges, and coastal retreats in pristine wilderness.</p></div>
+            <div class="service-card"><div class="service-icon">🎭</div><h3>Private Tours</h3><p>Exclusively yours. Custom-designed itineraries with private guides, luxury transport, and VIP access to attractions.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="2" id="collections">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Popular примеры ваших работ</div>
+          <h2 class="section-title reveal-3d">Handpicked<br><span class="gradient-text">примеры ваших работ</span></h2>
+          <p class="section-desc reveal-3d">The world's most captivating places, curated for unforgettable experiences.</p>
+          <div class="collections-grid reveal-3d">
+            <div class="collection-card card-large">
+              <div class="collection-overlay">
+                <span class="collection-label">Europe · Mediterranean</span>
+                <h3>Mediterranean Dream</h3>
+                <p>Sun-drenched coastlines, ancient ruins, and world-class cuisine. From the Amalfi Coast to the Greek Islands.</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <div class="collection-overlay">
+                <span class="collection-label">Global Reach</span>
+                <h3>50+</h3>
+                <p>примеры ваших работ across 6 continents, each personally vetted by our travel experts</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <div class="collection-overlay">
+                <span class="collection-label">Traveler Rating</span>
+                <h3>4.9★</h3>
+                <p>Average rating from 2,000+ travelers who've journeyed with us</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="3" id="production">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Процесс работы</div>
+          <h2 class="section-title reveal-3d">Your<br><span class="gradient-text">Booking Journey</span></h2>
+          <p class="section-desc reveal-3d">From inspiration to destination — we handle every detail</p>
+          <div class="production-layout reveal-3d">
+            <div class="production-stats">
+              <div class="stat-card"><span class="stat-number">10+</span><span class="stat-label">years of expertise</span></div>
+              <div class="stat-card"><span class="stat-number">50+</span><span class="stat-label">destinations worldwide</span></div>
+              <div class="stat-card"><span class="stat-number">5,000+</span><span class="stat-label">happy travelers</span></div>
+              <div class="stat-card"><span class="stat-number">99%</span><span class="stat-label">on-time delivery</span></div>
+              <div class="production-steps">
+                <div class="prod-step"><span class="step-num">01</span><span class="step-text">Dream consultation & destination matching</span></div>
+                <div class="prod-step"><span class="step-num">02</span><span class="step-text">Custom itinerary design & accommodation selection</span></div>
+                <div class="prod-step"><span class="step-num">03</span><span class="step-text">Booking confirmation & travel documentation</span></div>
+                <div class="prod-step"><span class="step-num">04</span><span class="step-text">Pre-departure briefing & local contacts</span></div>
+                <div class="prod-step"><span class="step-num">05</span><span class="step-text">24/7 on-trip support & post-travel follow-up</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="4" id="about">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">О нас</div>
+          <h2 class="section-title reveal-3d">О нас<br><span class="gradient-text">ВАША КОМПАНИЯ</span></h2>
+          <p class="section-desc reveal-3d">Travel is not just a trip — it's a transformation</p>
+          <div class="about-grid reveal-3d">
+            <div class="about-card"><div class="about-icon">🌍</div><h3>Local Expertise</h3><p>In-country specialists and local guides who know every hidden gem. Authentic experiences you won't find in guidebooks.</p></div>
+            <div class="about-card"><div class="about-icon">✨</div><h3>Bespoke Itineraries</h3><p>No two trips are alike. Every journey custom-crafted to match your interests, pace, and travel style.</p></div>
+            <div class="about-card"><div class="about-icon">🛡️</div><h3>Worry-Free Travel</h3><p>Comprehensive travel insurance, 24/7 emergency support, and flexible rebooking policies. Travel with complete peace of mind.</p></div>
+            <div class="about-card"><div class="about-icon">💎</div><h3>VIP Treatment</h3><p>Priority access, private transfers, exclusive dining reservations, and surprise upgrades. The luxury touches that make the difference.</p></div>
+          </div>
+          <div class="about-cta reveal-3d"></div>
+        </div>
+      </section>
+
+      <section class="page" data-index="5" id="contact">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Start Your Journey</div>
+          <h2 class="section-title reveal-3d">Let's Plan Your<br><span class="gradient-text">Next Adventure</span></h2>
+          <p class="section-desc reveal-3d">Speak with our travel experts — your dream trip is just a conversation away</p>
+          <div class="contact-layout reveal-3d" style="display:flex;justify-content:center;">
+            <div class="contact-info-card">
+              <h3>Contact Us</h3>
+              <div class="contact-item"><span class="contact-icon">📧</span><div><strong>Email</strong><a href="mailto:ВАША ПОЧТА">ВАША ПОЧТА</a></div></div>
+              <div class="contact-item"><span class="contact-icon">📞</span><div><strong>Phone</strong><a href="tel:+15559876543">+1 (555) 987-6543</a></div></div>
+              <div class="contact-item"><span class="contact-icon">📍</span><div><strong>Address</strong><span>200 Park Avenue, Suite 1800, New York, NY 10166</span></div></div>
+              <div class="contact-item"><span class="contact-icon">⏰</span><div><strong>Hours</strong><span>Mon–Fri: 9:00 AM – 7:00 PM | Sat: 10:00 AM – 4:00 PM</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:32px">
+  <a href="https://globalplus.tech/#page-4" class="btn-outline" style="font-size:16px;padding:14px 40px;display:inline-block;text-decoration:none;">ВЕРНУТЬСЯ НА ГЛАВНУЮ</a>
+</div>
+        <footer class="footer">
+          <div class="footer-inner">
+            <span class="footer-logo">ВАША КОМПАНИЯ</span>
+            <span class="footer-copy">© 2026 ВАША КОМПАНИЯ</span>
+            
+          </div>
+        </footer>
+      </section>
+
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
